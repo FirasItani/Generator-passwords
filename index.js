@@ -3,12 +3,14 @@ const characters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
 
 let firstpassEl = document.getElementById("firstpass")
 let secondpassEl = document.getElementById("secondpass")
-let lengthEl = document.getElementById("length-el").value;
-let number = parseInt(lengthEl);
-let symbolEl = document.getElementById("symbol-el")
-let numberEl = document.getElementById("numbers-el")
+
 
 function generate() {
+  let lengthEl = document.getElementById("length-el").value;
+  let number = parseInt(lengthEl);
+  let symbolEl = document.getElementById("symbol-el")
+  let numberEl = document.getElementById("numbers-el")
+
   firstpassEl.textContent = ""
   secondpassEl.textContent = ""
   if (number > 7 && number < 19) {
