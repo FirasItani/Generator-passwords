@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="master.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Generate a <br><span class="note">random password</span></h1>
+  <p>Never use an insecure password again.</p>
+  <p class="max"><span class="notes">Note:</span> max length 18 characters.</p>
+  <button id="btn-generate" onclick="generate()">Generate password</button>
+  <div class="length">
+    <label class="label">Length</label>
+    <input id="length-el" type="number" name="number" min="8" max="18" step="1" value="8">
+  </div>
+  <div class="symbol">
+    <input id="symbol-el" type="checkbox" name="symbol" value="no symbol" />
+    <label for="symbol-el">No Symbol</label>
+  </div>
+
+  <div class="number">
+    <input id="numbers-el" type="checkbox" name="number" value="no number" />
+    <label for="numbers-el">No Number</label>
+  </div>
+  <hr>
+  <div class="gene">
+    <span class="pass" id="firstpass"></span>
+    <span class="pass" id="secondpass"></span>
+  </div>
+
+  <div class="copy">
+    <button id="copy-1" onclick="copy1(firstpass.textContent)">Copy</button>
+    <button id="copy-2" onclick="copy2()">Copy</button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
